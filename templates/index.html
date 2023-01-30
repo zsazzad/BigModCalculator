@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Calculator</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="cal">
+        <h1>Mod Calculator</h1>
+        <form action="#" method="post" id="myAnchor">
+            {% csrf_token %}
+            <label for="#" class="base"><b>Base</b></label>
+            <input type="text" name="base" value="{{ base }}">
+            <br>
+            <br>
+            <label for="#" class="ex"><b>Exponent</b></label>
+            <input type="text" name="ex" value="{{ex}}">
+            <br>
+            <br>
+            <label for="#" class="div"><b>Divisor</b></label>
+            <input type="text" name="div" value="{{div}}">
+            <br>
+            <br>
+            <button type="submit" >Calculate</button>
+            <br>
+            <br>
+            <label for="#" >Result</label>
+            <input type="text" value="{{ ans }}">
+        </form>
+    </div>
+</body>
+
+</html>
